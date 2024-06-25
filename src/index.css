@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sticky {
+    @apply fixed bg-slate-300 opacity-80 border-b max-w-full mx-auto px-14 backdrop-blur-0 transition duration-100 ease-in-out
+}
