@@ -16,10 +16,10 @@ export const Navbar = () => {
     })
  return (
     <div>
-        <header className="container">
+        <header className="container ">
             <div className="px-4 w-full flex items-center justify-between py-7">
                 <div >
-                    <Link to='/sasa' className="text-xl font-semibold">Hafidz News</Link>
+                    <Link to='/' className="text-xl font-semibold">Hafidz News</Link>
                 </div>
                 <nav className="text-xl font-semibold">
                     <ul className="flex gap-x-4">
@@ -27,7 +27,7 @@ export const Navbar = () => {
                             <Link className="font-bold" to="/">News</Link>
                             </li>
                         <li>
-                            <Link to="/Popular">Popular</Link>
+                            <Link to="/Popular" className="font-bold">Popular</Link>
                             </li>
                     </ul>
                 </nav>

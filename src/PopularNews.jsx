@@ -3,9 +3,12 @@ import { Navbar } from './components/Navbar';
 import { useFetchEverything } from './useFetchNews/FetchNews';
 import axios from 'axios';
 import Loading from './components/Loading';
+import {useDebounce} from 'use-debounce'
 
 export default function PopularNews() {
   const [query, setQuery] = useState(`code`);
+
+  // const [value] = useDebounce(query, 3000)
 
   const { data, isError, isFetched, isLoading, refetch } = useFetchEverything(query);
 
@@ -41,16 +44,16 @@ return <div>No News Available</div>
                 <h2  className="text-5xl tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 via-sky-600 to-cyan-900 font-bold flex items-center justify-center">
                   Cari Berita
                 </h2>
-                <form onSubmit={handleSubmit} className="flex gap-3 items-center justify-center mt-10">
-                  {/* <input
+                <form onSubmit={handleSubmit} className="border-b pb-10 border-slate-500 flex gap-3 items-center justify-center mt-10">
+                  <input
                     type="text"
                     name="name"
                     id="name"
                     value={query}
                     className="shadow w-full max-w-lg py-3.5 bg-slate-300 rounded-md shadow-slate-200 placeholder:px-3 placeholder:text-lg placeholder:font-semibold"
-                    placeholder="Search all news that we provides"
+                    placeholder="Search all news"
                     onChange={(e) => setQuery(e.target.value)}
-                  /> */}
+                  />
            <button type="submit" className="px-5 py-3 bg-cyan-400 rounded-md text-xl font-semibold">
                     Submit
                   </button>
